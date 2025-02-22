@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://b8a8wastjanqa"]
+
+[ext_resource type="Script" path="res://scripts/Main.cs" id="1_dv2u5"]
+[ext_resource type="PackedScene" uid="uid://b26cap2b22kp0" path="res://scenes/oleg.tscn" id="1_j3nhf"]
+[ext_resource type="PackedScene" uid="uid://b7g5wpn16uvym" path="res://scenes/tile_map_layer.tscn" id="2_cv68r"]
+[ext_resource type="PackedScene" uid="uid://boq66ltfikbhk" path="res://scenes/tree.tscn" id="4_38om0"]
+[ext_resource type="PackedScene" uid="uid://bw0ktlli344lc" path="res://scenes/hud.tscn" id="5_q5nh1"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_dv2u5")
+
+[node name="Oleg" parent="." instance=ExtResource("1_j3nhf")]
+light_mask = 0
+z_index = 1
+scale = Vector2(0.5, 0.5)
+
+[node name="TileMapLayer" parent="." instance=ExtResource("2_cv68r")]
+
+[node name="Tree" parent="." instance=ExtResource("4_38om0")]
+position = Vector2(1697, 507)
+scale = Vector2(8, 8)
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(-57, 193)
+
+[node name="HUD" parent="." instance=ExtResource("5_q5nh1")]

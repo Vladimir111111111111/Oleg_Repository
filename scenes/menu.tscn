@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://d18hvt565behk"]
+
+[ext_resource type="Script" path="res://scripts/Menu.cs" id="1_3q6y7"]
+[ext_resource type="FontFile" uid="uid://bbny5bniutnjo" path="res://mygame_assets/PixelizerBold.ttf" id="2_2jvgy"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_3q6y7")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 387.0
+offset_top = 157.0
+offset_right = 875.0
+offset_bottom = 322.0
+theme_override_fonts/font = ExtResource("2_2jvgy")
+theme_override_font_sizes/font_size = 50
+text = "Play"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 388.0
+offset_top = 398.0
+offset_right = 876.0
+offset_bottom = 555.0
+theme_override_fonts/font = ExtResource("2_2jvgy")
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

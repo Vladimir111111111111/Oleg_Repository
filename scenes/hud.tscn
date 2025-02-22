@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://bw0ktlli344lc"]
+
+[ext_resource type="Script" path="res://scripts/Hud.cs" id="1_w7uey"]
+[ext_resource type="FontFile" uid="uid://bbny5bniutnjo" path="res://mygame_assets/PixelizerBold.ttf" id="1_xah0j"]
+[ext_resource type="Texture2D" uid="uid://1wujfipct02c" path="res://mygame_assets/Oleg/Oleg_256.png" id="2_qw51s"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_w7uey")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 1
+offset_top = 496.0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.446777, 0.446777, 0.446777, 1)
+
+[node name="MessageLabel" type="Label" parent="ColorRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 20.0
+offset_top = 24.0
+offset_right = 1252.0
+offset_bottom = 207.0
+theme_override_fonts/font = ExtResource("1_xah0j")
+theme_override_font_sizes/font_size = 30
+text = "ZZ Z z Z Z
+
+"
+autowrap_mode = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+z_index = 1
+color = Color(0.513233, 0.513233, 0.513233, 1)
+polygon = PackedVector2Array(0, 496, 0, 456, 224, 456, 272, 496)
+
+[node name="Label" type="Label" parent="Polygon2D"]
+texture_filter = 3
+offset_left = 20.0
+offset_top = 464.0
+offset_right = 216.0
+offset_bottom = 495.0
+theme_override_fonts/font = ExtResource("1_xah0j")
+theme_override_font_sizes/font_size = 30
+text = "Oleg"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(128, 416)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_qw51s")
